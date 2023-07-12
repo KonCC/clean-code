@@ -1,7 +1,6 @@
 # Practice 1
 
 
-
 ## Overview
 
 - 해당 애플리케이션은 Entity인 `Post`와 `Quesiton` 으로부터 DTO인 `EditPostDto`를 생성하는 기능을 수행합니다.
@@ -16,7 +15,7 @@
 - 실행 방법(또는 개인 환경의 IDE에서 실행해도 됩니다.)
 
   ```shell
-  g++ -o main main.c
+  g++ -o main main.cpp
   ./main
   ```
 
@@ -64,13 +63,17 @@
 ## 로직
 
 - `main.cpp`
-
-  - `Post findPostById(int postId);` : 가상의 repository에서 `Post` 를 조회하는 함수입니다. 수정하면 안되는 함수입니다.
-  - `EditPostDto getEditPostFormById(int postId)` : `EditPostDto`를 생성하는 함수입니다. 이 함수를 리팩토링 하시면 됩니다.
-  - `int main()` : 리펙토링이 올바르게 되었는지 확인하기 위해, 테스트를 진행합니다. 수정하면 안되는 함수입니다.
+  - `Post findPostById(int postId);` 
+    - 가상의 repository에서 `Post` 를 조회하는 함수입니다.
+    - 수정하면 안되는 함수입니다.
+  - `EditPostDto getEditPostFormById(int postId)` 
+    - `EditPostDto`를 생성하는 함수입니다.
+    - 이 함수를 리팩토링 하시면 됩니다.
+  - `int main()` 
+    - 리펙토링이 올바르게 되었는지 확인하기 위해, 테스트를 진행합니다.
+    - 수정하면 안되는 함수입니다.
 
 - 가상 repository에서 조회한 `Post`는 다음을 보장합니다.
-
   -  `Post` 의 멤버 변수인 `questions`은 vector 크기가 최소 0 ~ 최대 3 입니다.
     - 이때 `question`은 vector 인덱스 순서대로 `order`가 1씩 증가합니다.(`order`는 1부터 시작)
 
@@ -79,6 +82,7 @@
   - 멤버 변수인 `questionDtoList` 는 vector 크기가 3이어야 합니다.
   - 만약 `Post`의 `questions`의 사이즈가 3이 아니라면, `QuestionDto.content`는 `""`의 값을 갖도록 추가하여야 합니다.
     - 이때 `order`는 순서대로 유지되어야 합니다.
+<br>
 
   ```c++
   vector<Question> questions = post.getQuestions();
