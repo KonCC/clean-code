@@ -20,7 +20,7 @@ EditPostDto getEditPostFormById(int postId) {
         editPostDto.questionDtoList.push_back(questionDto);
     }
 
-    for (int i = questions.size() + 1; i <= 3; ++i) {
+    for (int i = (int) questions.size() + 1; i <= 3; ++i) {
         QuestionDto questionDto = QuestionDto(i, "");
         editPostDto.questionDtoList.push_back(questionDto);
     }
@@ -41,7 +41,7 @@ int main() {
         isCorrect &= (editPostDto.postId == testNumber);
         cout << "  postId =====> " << boolalpha << isCorrect << "\n";
 
-        cout << "  == questionDto vector ==\n";
+        cout << "  [ questionDto vector ]\n";
 
         isCorrect &= (editPostDto.questionDtoList.size() == 3);
         cout << "    vector size =====> " << boolalpha << isCorrect << "\n";
@@ -49,7 +49,7 @@ int main() {
         for (int i = 0; i < editPostDto.questionDtoList.size(); ++i) {
             cout << "    index " << i << "\n";
             isCorrect &= (editPostDto.questionDtoList[i].order == i + 1);
-            cout << "      order =====> " << boolalpha << isCorrect << "\n";
+            cout << "      order   =====> " << boolalpha << isCorrect << "\n";
 
             if (i < 4 - testNumber)
                 isCorrect &= (editPostDto.questionDtoList[i].content == "questionContent" + to_string(i + 1));
@@ -85,5 +85,8 @@ Post findPostById(int postId) {
         vector<Question> questions;
         return Post(4, "title4", "content4", "2023-07-15", questions);
     }
+
+    cout << "Wrong postId!\n";
+    exit(1);
 }
 
