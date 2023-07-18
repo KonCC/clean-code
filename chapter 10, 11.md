@@ -374,18 +374,19 @@ public Service getService() {
 **Main 분리**
 - 생성과 관련한 코드는 모두 main이나 main이 호출하는 모듈로 옮기고, 나머지 시스템은 모든 객체가 생성되었고 모든 의존성이 연결되었다고 가정한다.
 
-![figure11-1](/images/chapter10,11/figure11-1.png)
+![figure11-1](/images/chapter10,11/figure1.png)
 
 - 의존성 화살표 방향에 주목하자. 모든 화살표가 main 쪽에서 애플리케이션 쪽을 향한다.
 - 즉, 애플리케이션은 main이나 객체가 생성되는 과정을 전혀 모른다는 뜻이다.
 - 단지 모든 객체가 적절히 생성되었다고 가정한다.
 
 **팩토리 기법**
+
 - 때로는 객체가 생성되는 시점을 애플리케이션이 결정할 필요도 생긴다.
 - 예를 들어, (아래 이미지에서는) LineItem을 생성하는 시점은 `OrderProcessing`가 결정하지만, 구체적인 코드는 알 수 없다.
 - 마찬가지로 의존성 화살표 방향이 main에서 애플리케이션 쪽으로 향한다.
 
-![figure11-2](/images/chapter10,11/figure11-2.png)
+![figure11-2](/images/chapter10,11/figure2.png)
 
 **의존성 주입(DI)**
 - 의존성 주입은 제어 역전(IoC) 기법을 의존성 관리에 적용한 메커니즘이다.
