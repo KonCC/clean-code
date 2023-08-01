@@ -21,7 +21,7 @@ Argument 저장 변수의 멤버 변수 value를 argument String의 해당 부�
 
 ---
 ## 1차 초안
-```
+```java
 public class Args {
     private String schema;
     private String[] args;
