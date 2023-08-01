@@ -219,14 +219,14 @@ public class KRVacationPolicy extends VacationPolicy {
 **멀티쓰레딩(Multithreading)**
 
 하나의 프로세스 내에서 여러 개의 스레드를 동시에 실행하는 프로그래밍 방식.
+![image](https://github.com/KonCC/clean-code/assets/102205852/e00db1c6-5f01-48e5-90e8-2aa39b40e6e3)
 
-[##_Image|kage@tEjmm/btsoiYRsIzb/80An39U0Zsib5l0MrUcuh0/img.png|CDM|1.3|{"originWidth":1902,"originHeight":1128,"style":"alignCenter","width":582,"height":345}_##]
 
 **비동기(Asynchronous)**는 어떤 작업을 요청한 후 그 작업이 완료되기 전에도 다른 작업을 수행할 수 있는
 
 프로그래밍 방식을 의미.
+![image](https://github.com/KonCC/clean-code/assets/102205852/4555da07-18af-40f1-ab1c-11138daee810)
 
-[##_Image|kage@cPKEWr/btsoe1I2HCb/EVwichYzASo9Pjk8rwhqd1/img.png|CDM|1.3|{"originWidth":680,"originHeight":376,"style":"alignCenter","width":534,"height":295}_##]
 
 스레드가 하나인 프로그램은 **무엇**과 **언제**가 서로 밀접하다.
 
